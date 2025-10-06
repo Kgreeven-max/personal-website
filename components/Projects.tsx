@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Github, ExternalLink, Brain, Shield, Bot, TrendingUp } from 'lucide-react';
+import { Github, ExternalLink } from 'lucide-react';
 
 export default function Projects() {
   const ref = useRef(null);
@@ -13,7 +13,6 @@ export default function Projects() {
     {
       title: 'AI Transaction Categorization Gateway',
       description: 'High-performance API gateway with Phi-4 14B integration for intelligent financial transaction categorization. Features multi-tier processing pipeline with DuckDB caching, achieving 90-95% accuracy at 5ms-500ms response times.',
-      icon: Brain,
       tags: ['Python', 'FastAPI', 'Phi-4 14B', 'DuckDB', 'llama.cpp', 'Cloudflare'],
       github: '#contact',
       demo: '#contact',
@@ -22,7 +21,6 @@ export default function Projects() {
     {
       title: 'Automated Testing Platform',
       description: 'Production-ready test automation framework for web applications with real-time monitoring capabilities. Built to ensure application reliability and performance through comprehensive automated testing workflows.',
-      icon: Shield,
       tags: ['Python', 'Playwright', 'Automation', 'Testing', 'Node.js'],
       github: '#contact',
       demo: '#contact',
@@ -31,11 +29,18 @@ export default function Projects() {
     {
       title: 'OpenAI-Compatible LLM API',
       description: 'Enterprise-grade API service with function calling, real-time analytics, and monitoring dashboard. Supports multiple concurrent users with rate limiting, cost tracking, and secure tunnel integration.',
-      icon: Bot,
       tags: ['Python', 'LiteLLM', 'DuckDB', 'Streamlit', 'FastAPI'],
       github: '#contact',
       demo: '#contact',
       gradient: 'from-green-500 to-emerald-500',
+    },
+    {
+      title: 'Conversational AI Platform',
+      description: 'Interactive chatbot system with natural language processing capabilities. Features context-aware responses, session management, and scalable architecture designed for enterprise deployment.',
+      tags: ['Python', 'NLP', 'API', 'Docker', 'PostgreSQL'],
+      github: '#contact',
+      demo: '#contact',
+      gradient: 'from-orange-500 to-red-500',
     },
   ];
 
@@ -63,7 +68,6 @@ export default function Projects() {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => {
-            const Icon = project.icon;
             return (
               <motion.div
                 key={project.title}
@@ -76,11 +80,6 @@ export default function Projects() {
                 <div className={`h-2 bg-gradient-to-r ${project.gradient}`} />
 
                 <div className="p-6">
-                  {/* Icon */}
-                  <div className={`inline-block p-3 bg-gradient-to-r ${project.gradient} rounded-lg mb-4`}>
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-
                   {/* Title */}
                   <h3 className="text-2xl font-bold mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
                     {project.title}

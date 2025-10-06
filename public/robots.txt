@@ -1,0 +1,117 @@
+# greeventech.com - Robots.txt
+# This site allows ethical web crawling for search engines
+# AI/LLM bots should respect these rules
+
+# OpenAI GPT Crawler
+User-agent: GPTBot
+Disallow: /api/
+Disallow: /admin-login
+Disallow: /wp-admin
+Allow: /
+
+# Anthropic Claude Crawler
+User-agent: ClaudeBot
+Disallow: /api/
+Disallow: /admin-login
+Disallow: /wp-admin
+Allow: /
+
+# Google Extended (Bard/Gemini)
+User-agent: Google-Extended
+Disallow: /api/
+Disallow: /admin-login
+Disallow: /wp-admin
+Allow: /
+
+# Common Crawl
+User-agent: CCBot
+Disallow: /api/
+Disallow: /admin-login
+Disallow: /wp-admin
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Disallow: /api/
+Disallow: /admin-login
+Disallow: /wp-admin
+Allow: /
+
+# Bytedance/TikTok
+User-agent: Bytespider
+Disallow: /
+
+# Meta AI
+User-agent: FacebookBot
+Disallow: /api/
+Allow: /
+
+# Applebot (Siri, Spotlight)
+User-agent: Applebot
+Disallow: /api/
+Allow: /
+
+# Diffbot
+User-agent: Diffbot
+Disallow: /
+
+# Other AI Scrapers to Block
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+# Allow all legitimate search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# HONEYPOT TRAPS (attract malicious bots)
+# These pages don't exist or are traps
+# Bots that access these will be logged
+User-agent: *
+Disallow: /admin
+Disallow: /admin-login
+Disallow: /wp-admin
+Disallow: /wp-login.php
+Disallow: /phpmyadmin
+Disallow: /.env
+Disallow: /config.php
+Disallow: /api/users
+Disallow: /private/
+
+# Allow public pages
+Allow: /
+Allow: /#about
+Allow: /#projects
+Allow: /#contact
+
+# Sitemap location
+Sitemap: https://greeventech.com/sitemap.xml

@@ -44,7 +44,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-lg text-gray-500 dark:text-gray-500 mb-12 max-w-2xl mx-auto"
           >
-            Building ML tools to solve real problems. Most of my work involves making financial data less painful to work with.
+            Building ML tools that solve real problems. Right now that means automating the tedious parts of financial data work.
             Based in San Diego, CA.
           </motion.p>
 

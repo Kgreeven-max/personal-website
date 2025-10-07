@@ -86,7 +86,7 @@ export default function Projects() {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
+                  <p className="text-gray-600 dark:text-gray-400 mb-4">
                     {project.description}
                   </p>
 

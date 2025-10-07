@@ -11,32 +11,32 @@ export default function Projects() {
 
   const projects = [
     {
-      title: 'AI Transaction Categorization Gateway',
-      description: 'High-performance API gateway with Phi-4 14B integration for intelligent financial transaction categorization. Features multi-tier processing pipeline with DuckDB caching, achieving 90-95% accuracy at 5ms-500ms response times.',
+      title: 'Transaction Categorization API',
+      description: 'Started with a problem: categorizing thousands of bank transactions by hand was eating up hours every week. Built an API using Phi-4 running locally (via llama.cpp, no cloud needed). Added DuckDB to cache common patterns so repeat transactions come back instantly. The multi-tier setup checks cache first, then hits the model only when needed. Result: what used to take hours now takes seconds, hitting 90-95% accuracy on most transaction types. Response times range from 5ms for cached items to about 500ms for new patterns.',
       tags: ['Python', 'FastAPI', 'Phi-4 14B', 'DuckDB', 'llama.cpp', 'Cloudflare'],
       github: '#contact',
       demo: '#contact',
       gradient: 'from-blue-500 to-cyan-500',
     },
     {
-      title: 'Automated Testing Platform',
-      description: 'Production-ready test automation framework for web applications with real-time monitoring capabilities. Built to ensure application reliability and performance through comprehensive automated testing workflows.',
+      title: 'Web Testing Automation',
+      description: 'Clicking through the same test scenarios every release was mind-numbing and time-consuming. Built this with Playwright to record my actions visually using codegen, then replay them automatically. Added real-time uptime monitoring to catch issues before they become problems. The whole setup runs tests while I work on other stuff, saving probably 5-6 hours a week of repetitive manual testing. Works across different browsers including WebKit/Safari which can be tricky.',
       tags: ['Python', 'Playwright', 'Automation', 'Testing', 'Node.js'],
       github: '#contact',
       demo: '#contact',
       gradient: 'from-purple-500 to-pink-500',
     },
     {
-      title: 'OpenAI-Compatible LLM API',
-      description: 'Enterprise-grade API service with function calling, real-time analytics, and monitoring dashboard. Supports multiple concurrent users with rate limiting, cost tracking, and secure tunnel integration.',
+      title: 'Self-Hosted LLM API',
+      description: 'Got tired of paying per API call - costs add up fast when you are experimenting. Set up my own LLM infrastructure using LiteLLM to make it OpenAI-compatible, so existing code works without changes. Built a Streamlit dashboard to track costs and usage patterns in real-time. Runs through Cloudflare tunnels for secure remote access. The whole thing handles me and a couple teammates using it concurrently without issues. Added rate limiting and cost tracking to avoid surprises.',
       tags: ['Python', 'LiteLLM', 'DuckDB', 'Streamlit', 'FastAPI'],
       github: '#contact',
       demo: '#contact',
       gradient: 'from-green-500 to-emerald-500',
     },
     {
-      title: 'Conversational AI Platform',
-      description: 'Interactive chatbot system with natural language processing capabilities. Features context-aware responses, session management, and scalable architecture designed for enterprise deployment.',
+      title: 'Internal Knowledge Chatbot',
+      description: 'Constantly looking up the same information in documentation was slowing everything down. Built a chatbot that understands context and remembers conversations. Uses basic NLP to parse questions and PostgreSQL to handle session state. Nothing fancy - just containerized with Docker for easy deployment and scaled to handle multiple users. Saved a ton of time not having to dig through docs for common questions.',
       tags: ['Python', 'NLP', 'API', 'Docker', 'PostgreSQL'],
       github: '#contact',
       demo: '#contact',
@@ -53,7 +53,7 @@ export default function Projects() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           className="text-4xl md:text-5xl font-bold text-center mb-4"
         >
-          Featured <span className="gradient-text">Projects</span>
+          Projects
         </motion.h2>
 
         <motion.p
@@ -62,7 +62,7 @@ export default function Projects() {
           transition={{ delay: 0.1 }}
           className="text-center text-gray-600 dark:text-gray-400 mb-16 max-w-2xl mx-auto"
         >
-          Solutions engineering projects focused on digital platforms, machine learning integration, and internal tooling.
+          Things I have built to solve real problems. Mostly focused on making repetitive work less painful.
         </motion.p>
 
         {/* Projects Grid */}
@@ -135,11 +135,11 @@ export default function Projects() {
           transition={{ delay: 0.5 }}
           className="text-center text-gray-500 dark:text-gray-500 mt-12 italic"
         >
-          These projects represent my focus on solutions engineering for digital platforms, machine learning applications, and internal tooling.{' '}
+          Built these to solve real problems I ran into. Want to know more about how any of these work?{' '}
           <a href="#contact" className="text-primary-600 dark:text-primary-400 hover:underline">
             Get in touch
           </a>
-          {' '}to learn more about my work.
+          .
         </motion.p>
       </div>
     </section>

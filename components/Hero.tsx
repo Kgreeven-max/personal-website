@@ -13,12 +13,6 @@ export default function Hero() {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
           {/* Name */}
@@ -50,7 +44,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-lg text-gray-500 dark:text-gray-500 mb-12 max-w-2xl mx-auto"
           >
-            Solutions engineer specializing in digital platforms, applying machine learning, and building internal tooling.
+            Building ML tools to solve real problems. Most of my work involves making financial data less painful to work with.
             Based in San Diego, CA.
           </motion.p>
 
